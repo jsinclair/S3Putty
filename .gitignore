@@ -1,5 +1,5 @@
 *.class
 *.jar
 
-bin/
-gen/
+Stone3Putty/bin/
+Stone3Putty/gen/

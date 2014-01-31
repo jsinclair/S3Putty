@@ -1,3 +1,5 @@
-Stone3Putty/bin/
-Stone3Putty/gen/
-Stone3Putty/.classpath
+*.class
+*.jar
+
+bin/
+gen/

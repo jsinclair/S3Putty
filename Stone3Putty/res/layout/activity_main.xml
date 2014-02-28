@@ -20,7 +20,9 @@
             android:id="@+id/start"
             style="@style/MenuFont"
             android:layout_gravity="right"
-            android:text="@string/start" />
+            android:text="@string/start" 
+            android:onClick="startGame"
+            />
 
         <TextView
             android:id="@+id/quick"

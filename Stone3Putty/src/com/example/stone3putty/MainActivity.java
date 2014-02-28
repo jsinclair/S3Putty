@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.widget.TextView;
 
 import com.example.stone3putty.util.SystemUiHider;
@@ -29,24 +28,9 @@ public class MainActivity extends Activity {
 		
 		((TextView) findViewById(R.id.settings)).setTypeface(tf);
 		((TextView) findViewById(R.id.about)).setTypeface(tf);
-//		
-//		((TextView) findViewById(R.id.start)).setOnClickListener(this);
-//		((TextView) findViewById(R.id.exit)).setOnClickListener(this);
 		
 	}
 
-//	@Override
-//	public void onClick(View view) {
-//		  switch(view.getId()) {
-//	        case R.id.exit:
-//	            finish();
-//	            break;
-//	        case R.id.start:
-//	        	System.out.println("printing");
-//	        	break;
-//	    }
-//		
-//	}
 
 	/**
 	 * This is called when the start label is clicked (as defined in activity_main.xml). 

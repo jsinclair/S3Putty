@@ -1,18 +1,21 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    tools:context=".MainActivity" >
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     android:orientation="horizontal" 
+    tools:context=".MainActivity"
+     >
+    
 
     <ImageView
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:src="@drawable/pugback" />
 
     <LinearLayout
         android:id="@+id/fullscreen_content_controls"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_margin="10dp"
         android:orientation="vertical" >
 

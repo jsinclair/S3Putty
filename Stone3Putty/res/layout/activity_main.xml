@@ -2,10 +2,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-     android:orientation="horizontal" 
-    tools:context=".MainActivity"
-     >
-    
+    android:orientation="horizontal"
+    tools:context=".MainActivity" >
 
     <ImageView
         android:layout_width="match_parent"
@@ -23,9 +21,8 @@
             android:id="@+id/start"
             style="@style/MenuFont"
             android:layout_gravity="right"
-            android:text="@string/start" 
             android:onClick="startGame"
-            />
+            android:text="@string/start" />
 
         <TextView
             android:id="@+id/customise"
@@ -45,6 +42,7 @@
         <TextView
             android:id="@+id/exit"
             style="@style/MenuFont"
+            android:onClick="exit"
             android:text="@string/exit" />
     </LinearLayout>
 

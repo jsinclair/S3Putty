@@ -1,6 +1,7 @@
 package com.example.stone3putty;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
@@ -39,6 +40,12 @@ public class MainActivity extends Activity {
 	 */
 	public void startGame(View view){
 		System.out.println("printing");
+		Intent intent = new Intent(this, GameActivity.class);
+		startActivity(intent);
+	}
+	
+	public void exit (View view){
+		finish();
 	}
 	
 }

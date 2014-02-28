@@ -7,8 +7,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-import com.example.stone3putty.util.SystemUiHider;
-
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.
  * status bar and navigation/system bar) with user interaction.
@@ -25,10 +23,9 @@ public class MainActivity extends Activity {
 		Typeface tf = Typeface.createFromAsset(getAssets(),"data/fonts/CelticHand.ttf");
 		((TextView) findViewById(R.id.start)).setTypeface(tf);
 		((TextView) findViewById(R.id.customise)).setTypeface(tf);
-		((TextView) findViewById(R.id.exit)).setTypeface(tf);
-		
 		((TextView) findViewById(R.id.settings)).setTypeface(tf);
 		((TextView) findViewById(R.id.about)).setTypeface(tf);
+		((TextView) findViewById(R.id.exit)).setTypeface(tf);
 		
 	}
 
@@ -44,8 +41,13 @@ public class MainActivity extends Activity {
 		startActivity(intent);
 	}
 	
+	public void startSettings(View view){
+		System.out.println("settings");
+		Intent intent = new Intent(this, SettingsActivity.class);
+		startActivity(intent);
+	}
+	
 	public void exit (View view){
 		finish();
 	}
-	
 }

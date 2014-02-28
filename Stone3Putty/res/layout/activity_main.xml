@@ -20,7 +20,6 @@
         <TextView
             android:id="@+id/start"
             style="@style/MenuFont"
-            android:layout_gravity="right"
             android:onClick="startGame"
             android:text="@string/start" />
 
@@ -32,6 +31,7 @@
         <TextView
             android:id="@+id/settings"
             style="@style/MenuFont"
+            android:onClick="startSettings"
             android:text="@string/settings" />
 
         <TextView

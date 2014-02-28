@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources><string name="app_name">Stone3Putty</string>
     <string name="start">START GAME</string>
-    <string name="quick">QUICK GAME</string>
     <string name="settings">SETTINGS</string>
     <string name="about">ABOUT</string>
     <string name="exit">EXIT</string>
+    <string name="customise">CUSTOMISE</string>
 </resources>

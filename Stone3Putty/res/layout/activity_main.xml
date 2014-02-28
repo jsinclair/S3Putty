@@ -25,9 +25,9 @@
             />
 
         <TextView
-            android:id="@+id/quick"
+            android:id="@+id/customise"
             style="@style/MenuFont"
-             android:text="@string/quick" />
+            android:text="@string/customise" />
 
         <TextView
             android:id="@+id/settings"

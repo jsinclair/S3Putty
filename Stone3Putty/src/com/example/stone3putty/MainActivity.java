@@ -24,7 +24,7 @@ public class MainActivity extends Activity {
 		
 		Typeface tf = Typeface.createFromAsset(getAssets(),"data/fonts/CelticHand.ttf");
 		((TextView) findViewById(R.id.start)).setTypeface(tf);
-		((TextView) findViewById(R.id.quick)).setTypeface(tf);
+		((TextView) findViewById(R.id.customise)).setTypeface(tf);
 		((TextView) findViewById(R.id.exit)).setTypeface(tf);
 		
 		((TextView) findViewById(R.id.settings)).setTypeface(tf);

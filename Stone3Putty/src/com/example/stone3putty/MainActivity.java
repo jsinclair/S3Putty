@@ -1,5 +1,6 @@
 package com.example.stone3putty;
 
+
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Typeface;
@@ -36,7 +37,6 @@ public class MainActivity extends Activity {
 	 * @param view The view that was clicked. 
 	 */
 	public void startGame(View view){
-		System.out.println("printing");
 		Intent intent = new Intent(this, GameActivity.class);
 		startActivity(intent);
 	}
@@ -47,6 +47,10 @@ public class MainActivity extends Activity {
 		startActivity(intent);
 	}
 	
+	/** 
+	 * This is called when the exit label is clicked  (as defined in activity_main.xml). 
+	 * @param view The view that was clicked.
+	 */
 	public void exit (View view){
 		finish();
 	}

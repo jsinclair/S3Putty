@@ -14,7 +14,7 @@ public class MusicManager {
 	public static final int MUSIC_MENU = 0;
 	public static final int MUSIC_GAME = 1;
 	public static final int MUSIC_END_GAME = 2;
-	private static final int PREF_DEFAULT_MUSIC_VOLUME_ITEM = 0;
+	private static final int PREF_DEFAULT_MUSIC_VOLUME_ITEM = 4;
 
 	private static SparseArray<MediaPlayer> players = new SparseArray<MediaPlayer>();
 	private static int currentMusic = -1;

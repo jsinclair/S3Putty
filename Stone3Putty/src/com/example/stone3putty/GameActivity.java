@@ -8,11 +8,14 @@ import org.andengine.entity.scene.Scene;
 import org.andengine.opengl.texture.region.ITextureRegion;
 import org.andengine.ui.activity.SimpleBaseGameActivity;
 
+import com.example.stone3putty.util.MusicManager;
+
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -24,6 +27,8 @@ import android.view.MenuItem;
  * 
  */
 public class GameActivity extends Activity {
+	
+	boolean continueMusic = true;
 
 	/** Camera width. */
 	private static int CAMERA_WIDTH = 800;
@@ -116,5 +121,31 @@ public class GameActivity extends Activity {
 ////		scene.attachChild(backgroundSprite);
 //		return null;
 //	}
+	
+	@Override
+	protected void onPause() {
+		super.onPause();
+		if (!continueMusic) {
+			MusicManager.pause();
+		}
+	}
+
+	@Override
+	protected void onResume() {
+		super.onResume();
+		continueMusic = false;
+		MusicManager.start(this, MusicManager.MUSIC_GAME);
+	}
+	
+	@Override
+	public boolean onKeyDown(int keyCode, KeyEvent event) {
+		switch(keyCode) {
+		case KeyEvent.KEYCODE_BACK:
+			continueMusic = false;
+			break;
+		}
+		
+		return super.onKeyDown(keyCode, event);
+	}
 
 }

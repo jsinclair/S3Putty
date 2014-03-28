@@ -69,6 +69,12 @@ public class MainActivity extends Activity {
 		Intent intent = new Intent(this, SettingsActivity.class);
 		startActivity(intent);
 	}
+	
+	public void startCustomise(View view) {
+		continueMusic = true;
+		Intent intent = new Intent(this, CustomiseActivity.class);
+		startActivity(intent);
+	}
 
 	/**
 	 * This is called when the exit label is clicked (as defined in

@@ -44,6 +44,14 @@
             <meta-data android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.stone3putty.MainActivity" />
         </activity>
+        <activity android:name=".CustomiseActivity"
+            android:label="@string/title_activity_customise"
+            android:parentActivityName="com.example.stone3putty.CustomiseActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+            <meta-data android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.stone3putty.MainActivity" />
+        </activity>
     </application>
 
 </manifest>

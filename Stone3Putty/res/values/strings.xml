@@ -19,5 +19,6 @@
     <string name="vibrate">VIBRATE</string>
     <string name="enabled">ENABLED</string>
     <string name="disabled">DISABLED</string>
-    
+    <string name="title_activity_customise">CustomiseActivity</string>
+    <string name="customise_your_pug">CUSTOMISE YOUR PUG!</string>
 </resources>

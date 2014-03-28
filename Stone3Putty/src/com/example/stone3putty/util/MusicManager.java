@@ -1,6 +1,7 @@
 package com.example.stone3putty.util;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.media.MediaPlayer;
 import android.preference.PreferenceManager;
 import android.util.Log;
@@ -19,6 +20,8 @@ public class MusicManager {
 	private static SparseArray<MediaPlayer> players = new SparseArray<MediaPlayer>();
 	private static int currentMusic = -1;
 	private static int previousMusic = -1;
+	
+	private static boolean shouldPlay = true;
 
 	public static float getMusicVolume(Context context) {
 		String[] volumes = context.getResources().getStringArray(
@@ -27,6 +30,10 @@ public class MusicManager {
 				context).getString(
 				context.getString(R.string.key_pref_music_volume),
 				volumes[PREF_DEFAULT_MUSIC_VOLUME_ITEM]);
+		
+		SharedPreferences settings = context.getSharedPreferences(context.getString(R.string.settings_storage), 0);
+		shouldPlay = settings.getBoolean(context.getString(R.string.key_music_on), true);
+		
 		return Float.valueOf(volumeString);
 	}
 
@@ -36,6 +43,10 @@ public class MusicManager {
 
 	@SuppressWarnings("unused")
 	public static void start(Context context, int music, boolean force) {
+		if (!shouldPlay) {
+			return;
+		}
+		
 		if (!force && currentMusic > -1) {
 			// already playing some music and not forced to change
 			return;
@@ -142,5 +153,15 @@ public class MusicManager {
 		}
 		currentMusic = -1;
 		Log.d(TAG, "Current music is now [" + currentMusic + "]");
+	}
+	
+	public static void toggleMusic(Context context, boolean state, int music) {
+		shouldPlay = state;
+		
+		if (shouldPlay) {
+			start(context, music);
+		} else {
+			pause();
+		}
 	}
 }

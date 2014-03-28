@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="key_pref_music_volume">key_pref_music_volume</string>
+    <string name="key_music_on">key_music_on</string>
+    <string name="key_sound_on">key_sound_on</string>
+    <string name="key_vibrate_on">key_vibrate_on</string>
 </resources>
